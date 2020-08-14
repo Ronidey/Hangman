@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman</title>
+  <link rel="icon" href="assets/images/favicon.png" sizes="16x16">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <div class="modal" id="modal">
+    <div class="modal_content">
+      <h2>GAME OVER</h2>
+      <button class="btn-restart" id="btn-restart">Restart</button>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="container">
+      <header class="game-header">
+        <h1>Hangman</h1>
+
+        <div class="game-stats">
+          <p>Remaining lives: <span id="total-lives"></span></p>
+        </div>
+      </header>
+
+      <div class="hint">
+        <img class="hint_img" src="assets/images/bulb.png" alt="a bulb">
+        <p class="hint_tooltip" id="hint">Name of a popular fast food</p>
+      </div>
+
+      <div class="game-img-wrapper">
+        <svg class="hangman-img" viewBox="0 0 224 268" fill="none">
+          <g id="hangman">
+            <g id="machine">
+              <line id="Line 4" x1="43.8314" y1="70.9271" x2="108.831" y2="2.92705" stroke="currentColor"
+                stroke-width="6" />
+              <path id="Vector 1" d="M44 268V4C44 3.44771 44.4477 3 45 3H177C177.552 3 178 3.44772 178 4V36.5633"
+                stroke="currentColor" stroke-width="6" />
+              <line id="Line 5" x1="3" y1="265" x2="85" y2="265" stroke="currentColor" stroke-width="6"
+                stroke-linecap="round" />
+            </g>
+            <g id="cartoon">
+              <circle class="body-part" id="head" cx="178.5" cy="54.5" r="17.5" stroke="currentColor"
+                stroke-width="4" />
+              <line class="body-part" id="body" x1="179" y1="71" x2="179" y2="153" stroke="currentColor"
+                stroke-width="4" />
+              <line class="body-part" id="left-hand" x1="178.017" y1="89.7219" x2="134.017" y2="115.722"
+                stroke="currentColor" stroke-width="4" />
+              <line class="body-part" id="right-hand" x1="222.858" y1="115.918" x2="178.975" y2="89.7172"
+                stroke="currentColor" stroke-width="4" />
+              <line class="body-part" id="left-leg" x1="178.687" y1="149.257" x2="146.555" y2="189.001"
+                stroke="currentColor" stroke-width="4" />
+              <line class="body-part" id="right-leg" x1="213.585" y1="188.427" x2="179.509" y2="150.333"
+                stroke="currentColor" stroke-width="4" />
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <footer class="game-footer">
+        <div class="blanks" id="blanks"></div>
+      </footer>
+    </div>
+
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

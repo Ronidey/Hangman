@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Baloo";
+  src: url("../fonts/Baloo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Baloo";
+  src: url("../fonts/Baloo2-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #7c94ea;
+  color: #fff;
+  font-family: "Baloo", cursive;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  background: #4b5ea3;
+}
+.game-header h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.game-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 100ms;
+}
+.modal.is-visible {
+  opacity: 1;
+}
+.modal_content {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  transform: scale(0);
+  transition: transform 300ms 0.15s cubic-bezier(0.57, 0.59, 0.08, 1.25);
+}
+.modal.is-visible .modal_content {
+  transform: scale(1);
+}
+.modal h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #4b5ea3;
+}
+
+.btn-restart {
+  background: #4b5ea3;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2px;
+  transition: background 250ms, transform 250ms;
+}
+.btn-restart:focus, .btn-restart:hover {
+  background: #2e3c70;
+}
+.btn-restart:active {
+  transform: scale(0.9);
+}
+
+.hangman-img {
+  max-width: 100%;
+  max-height: 280px;
+}
+
+.body-part {
+  visibility: hidden;
+}
+.body-part.is-visible {
+  visibility: visible;
+}
+
+.hint {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.hint_img {
+  width: 18px;
+  padding: 0.3rem;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+.hint_tooltip {
+  position: absolute;
+  top: 120%;
+  max-width: 350px;
+  padding: 0.5rem;
+  background: #fff;
+  color: #000;
+  border-radius: 4px;
+  box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms 100ms;
+}
+.hint_tooltip::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 12px);
+  top: 0;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  transform: translate(0, -95%);
+}
+.hint_img:hover + .hint_tooltip,
+.hint .hint_tooltip:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.blanks {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+}
+.blanks span:first-child {
+  text-transform: uppercase;
+}
+.blanks.success {
+  color: #85ff7b;
+}
+.blanks.wrong {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 50%, 100% {
+    transform: translate(-0.5rem, 0);
+  }
+  25%, 75% {
+    transform: translate(0.5rem, 0);
+  }
+}
+.words {
+  display: none;
+}
+.words.is-visible {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

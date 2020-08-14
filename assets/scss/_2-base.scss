@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Baloo';
+  src: url('../fonts/Baloo2-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Baloo';
+  src: url('../fonts/Baloo2-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $primary;
+  color: #fff;
+  font-family: 'Baloo', cursive;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}

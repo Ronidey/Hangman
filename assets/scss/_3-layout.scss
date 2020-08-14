@@ -1,0 +1,24 @@
+.main {
+  overflow: hidden;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  background: $primary-dark;
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.game-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
